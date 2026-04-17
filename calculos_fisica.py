@@ -21,6 +21,7 @@ def calcular_aceleracao_centripeta():
     acp = ((v ** 2) / metros)
 
     print(f"A Aceleração Centrípeta é {acp}m/s^2")
+    input("")
 
 # Calcular Transmissão
 def calcular_transmissao():
@@ -35,27 +36,41 @@ def calcular_transmissao():
     f2 = (f1 * r1) / r2
     
     print(f"A frequencia da coroa e: {f2} rps")
-    print("-" * 45)
+    input("")
 
+# Calcular Força Gravitacional
+def calcular_forca_gravitacional():
 
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    G = float(6.674e-11)
+    print("--- Calculo de Forca Gravitacional ---\n")
+    m1 = float(input("Massa do primeiro corpo (Kg): "))
+    m2 = float(input("Massa do segundo corpo (Kg): "))
+    r = float(input("Distância entre os centros dos corpos (m): "))
+    F = (G * (m1 * m2) / r**2)
+    print(f"Forca = {F} N")
+    input("")
 
 # Lista de Opções
 opcoes = {
     "1": calcular_aceleracao_centripeta,
-    "2": calcular_transmissao
+    "2": calcular_transmissao,
+    "3": calcular_forca_gravitacional
 }
 
 # Loop Principal
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(f"Selecione o cálculo\n1. Calcular Aceleração Centrípeta\n2. Calcular Transmissão")
+    print(f'''Selecione o cálculo
+1. Calcular Aceleração Centrípeta
+2. Calcular Transmissão
+3. Calcular Forca Gravitacional''')
 
     escolha = input("> ")
     # Decisões
-    if "1" in opcoes:
-        opcoes['1']()
-    elif "2" in opcoes:
-        opcoes['2']()
+    if escolha in opcoes:
+        opcoes[escolha]()
     else:
         print("Opcao inválida")
         
