@@ -1,5 +1,5 @@
 import os
-
+# Aceleração Centrípeta
 def calcular_aceleracao_centripeta():
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -10,17 +10,19 @@ def calcular_aceleracao_centripeta():
 
     medida_distancia = input("O raio será inserido em metros 'm' ou 'km'?\n1. m\n2. Km\n> ")
 
-    if medida_distancia == "1":
+    if medida_distancia == "1" or medida_distancia == "m":
         metros = float(input("Digite a distancia em metros: "))
-
-    elif medida_distancia == "2":
+        print("Erro: Digite apenas numeros")
+    elif medida_distancia == "2" or medida_distancia == "km":
         quilometros = float(input("Digite a distancia em quilometros: "))
         metros = quilometros * 1000
+        print("Erro: Digite apenas numeros")
     
     acp = ((v ** 2) / metros)
 
     print(f"A Aceleração Centrípeta é {acp}m/s^2")
 
+# Calcular Transmissão
 def calcular_transmissao():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("--- Calculo de Transmissao (Coroa e Pinhao) ---\n")
@@ -35,20 +37,25 @@ def calcular_transmissao():
     print(f"A frequencia da coroa e: {f2} rps")
     print("-" * 45)
 
+
+
+# Lista de Opções
+opcoes = {
+    "1": calcular_aceleracao_centripeta,
+    "2": calcular_transmissao
+}
+
+# Loop Principal
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("Selecione o cálculo\n1. Calcular Aceleração Centrípeta\n2. Calcular Transmissão")
+    print(f"Selecione o cálculo\n1. Calcular Aceleração Centrípeta\n2. Calcular Transmissão")
 
     escolha = input("> ")
-
-    if escolha == "1":
-        calcular_aceleracao_centripeta()
-        input()
-    
-    elif escolha == "2":
-        calcular_transmissao()
-        input()
-    
+    # Decisões
+    if "1" in opcoes:
+        opcoes['1']()
+    elif "2" in opcoes:
+        opcoes['2']()
     else:
-        print("Digite uma opção válida!")
-        input()
+        print("Opcao inválida")
+        
