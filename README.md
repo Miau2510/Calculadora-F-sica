@@ -1,4 +1,4 @@
-# ⚛️ Physics Calculations with Python
+# ⚛️ Calculadora de Física com Python
 
 Este repositório contém uma ferramenta em Python desenvolvida para automatizar cálculos de física mecânica. O projeto foca na **simplicidade, leveza e precisão**, servindo como um assistente eficiente para a resolução de exercícios de cinemática e dinâmica.
 
