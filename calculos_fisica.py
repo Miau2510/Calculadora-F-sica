@@ -12,11 +12,10 @@ def calcular_aceleracao_centripeta():
 
     if medida_distancia == "1" or medida_distancia == "m":
         metros = float(input("Digite a distancia em metros: "))
-        print("Erro: Digite apenas numeros")
+
     elif medida_distancia == "2" or medida_distancia == "km":
         quilometros = float(input("Digite a distancia em quilometros: "))
         metros = quilometros * 1000
-        print("Erro: Digite apenas numeros")
     
     acp = ((v ** 2) / metros)
 
@@ -43,20 +42,48 @@ def calcular_forca_gravitacional():
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    G = float(6.674e-11)
+    G = 6.674e-11
     print("--- Calculo de Forca Gravitacional ---\n")
     m1 = float(input("Massa do primeiro corpo (Kg): "))
     m2 = float(input("Massa do segundo corpo (Kg): "))
     r = float(input("Distância entre os centros dos corpos (m): "))
     F = (G * (m1 * m2) / r**2)
-    print(f"Forca = {F} N")
-    input("")
+    print("Quer ver o resultado em:\n1. Decimal\n2. Notação científica")
+    escolha = input("> ")
+    match escolha:
+        case "1":
+            print(f"Forca = {F:.3f} N")
+            input("")
+        case "2":
+            print(f"Forca = {F:.2e} N")
+            input("")
+
+# Velocidade Média
+def calcular_velocidade_media():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("--- Calculo de Velocidade Media ---\n")
+
+    delta_s = float(input("Distancia Percorrida (∆s) (em metros): "))
+    delta_t = float(input("Tempo levado (∆t) (em segundos): "))
+
+    v = (delta_s / delta_t)
+
+    print("Quer ver o resultado em:\n1. Decimal\n2. Notação Científica")
+    escolha = input("> ")
+    match escolha:
+        case "1":
+            print(f"A velocidade média é: {v:.3f} m/s")
+            input("")
+        case "2":
+            print(f"A velocidade média é: {v:.2e} m/s")
+            input("")
 
 # Lista de Opções
 opcoes = {
     "1": calcular_aceleracao_centripeta,
     "2": calcular_transmissao,
-    "3": calcular_forca_gravitacional
+    "3": calcular_forca_gravitacional,
+    "4": calcular_velocidade_media
 }
 
 # Loop Principal
@@ -65,12 +92,10 @@ while True:
     print(f'''Selecione o cálculo
 1. Calcular Aceleração Centrípeta
 2. Calcular Transmissão
-3. Calcular Forca Gravitacional''')
+3. Calcular Forca Gravitacional
+4. Calcular Velocidade Media''')
 
     escolha = input("> ")
     # Decisões
     if escolha in opcoes:
         opcoes[escolha]()
-    else:
-        print("Opcao inválida")
-        

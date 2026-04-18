@@ -4,14 +4,13 @@ Este repositório contém uma ferramenta em Python desenvolvida para automatizar
 
 ## 🚀 Módulos Implementados
 
-### 1. Aceleração Centrípeta
-- Calcula a aceleração necessária para manter um corpo em trajetória circular.
-- **Conversão Automática:** Aceita a entrada do raio tanto em **metros** como em **quilómetros**, realizando a conversão interna para o Sistema Internacional (SI).
+### 1. Cálculo de Aceleração Centrípeta
 
-### 2. Transmissão de Movimento (Bicicletas/Engrenagens)
-- Calcula a relação de frequências entre duas engrenagens (como coroa e pinhão) conectadas por uma corrente.
-- Baseado na igualdade da velocidade linear nas extremidades: $$f_1 \cdot R_1 = f_2 \cdot R_2$$
-- **Validado:** Testado com sucesso em exercícios práticos de cadência de pedalada (Wayground/Quizizz).
+### 2. Cálculo de Transmissão de Movimento (Engrenagens)
+
+### 3. Cálculo de Força Gravitacional
+
+### 4. Cálculo de Velocidade Média
 
 ## 🛠️ Filosofia do Projeto
 
