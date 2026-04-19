@@ -78,12 +78,33 @@ def calcular_velocidade_media():
             print(f"A velocidade média é: {v:.2e} m/s")
             input("")
 
+def conversao_de_distancia():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("--- Conversao de Distancias ---")
+
+    print("1. Km -> m")
+    print("2. m 0> Km")
+    escolha = input("> ")
+
+    match escolha:
+        case "1":
+            quilometro = float(input("Digite a distancia em quilometros: "))
+            metro = (quilometro * 1000)
+            print(f"{quilometro:.2f} Km em metros é {metro:.2f} m")
+            input("")
+        case "2":
+            metro = float(input("Digite a distancia em metros: "))
+            quilometro = (metro / 1000)
+            print(f"{metro} m em quilometros é {quilometro} Km")
+            input("")
+
 # Lista de Opções
 opcoes = {
     "1": calcular_aceleracao_centripeta,
     "2": calcular_transmissao,
     "3": calcular_forca_gravitacional,
-    "4": calcular_velocidade_media
+    "4": calcular_velocidade_media,
+    "5": conversao_de_distancia
 }
 
 # Loop Principal
@@ -93,7 +114,8 @@ while True:
 1. Calcular Aceleração Centrípeta
 2. Calcular Transmissão
 3. Calcular Forca Gravitacional
-4. Calcular Velocidade Media''')
+4. Calcular Velocidade Media
+5. Conversao de Distancia''')
 
     escolha = input("> ")
     # Decisões
