@@ -25,4 +25,4 @@ Certifica-te de que tens o Python 3 instalado no teu sistema (Linux, Windows ou 
 1. Clone o repositório ou descarregue o ficheiro `calculos_fisica.py`.
 2. No terminal, execute:
    ```bash
-   python3 calculos_fisica.py
+   python3 main.py

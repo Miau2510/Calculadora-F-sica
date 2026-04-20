@@ -83,7 +83,7 @@ def conversao_de_distancia():
     print("--- Conversao de Distancias ---")
 
     print("1. Km -> m")
-    print("2. m 0> Km")
+    print("2. m -> Km")
     escolha = input("> ")
 
     match escolha:
