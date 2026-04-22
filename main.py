@@ -17,7 +17,8 @@ opcoes = {
     "2": fc.calcular_transmissao,
     "3": fc.calcular_forca_gravitacional,
     "4": fc.calcular_velocidade_media,
-    "5": fc.conversao_de_distancia
+    "5": fc.conversao_de_distancia,
+    "6": fc.calc_forc_peso
 }
 
 # Loop Principal
@@ -29,6 +30,7 @@ while True:
 3. Calcular Forca Gravitacional
 4. Calcular Velocidade Media
 5. Conversao de Distancia
+6. Calcular Forca Peso
 
 0. Sair''')
 

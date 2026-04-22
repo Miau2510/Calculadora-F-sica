@@ -98,3 +98,23 @@ def conversao_de_distancia():
             quilometro = (metro / 1000)
             print(f"{metro} m em quilometros é {quilometro} Km")
             input("")
+
+# Calcular forca peso
+def calc_forc_peso():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    print("--- Calcular Forca Peso ---")
+    print("Qual gravidade usara para isso?\n1. Terra (aprox. 9.81m/s²)\n2. Outro (especifique em m/s²)")
+    escolha_gravidade = input("> ")
+    gravidade = 0
+    match escolha_gravidade:
+        case "1":
+            gravidade = 9.81
+        case "2":
+            print("Digite a gravidade (m/s²)")
+            gravidade = float(input("> "))
+    print("Digite a massa do corpo (Kg)")
+    massa = float(input("> "))
+    peso = (massa * gravidade)
+    print(f"A forca peso de um corpo de {massa}Kg em uma gravidade de {gravidade}m/s² é de {peso}N")
+    input("")
