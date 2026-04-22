@@ -1,4 +1,5 @@
 import os
+
 # Aceleração Centrípeta
 def calcular_aceleracao_centripeta():
 

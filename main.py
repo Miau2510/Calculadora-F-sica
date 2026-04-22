@@ -1,5 +1,16 @@
 import funcoes as fc
 import os
+import time
+
+# Funcao Sair
+def sair():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("--- Sair ---")
+    print("Encerrando processo...")
+    time.sleep(1)
+    print("Programa finalizado")
+    time.sleep(0.5)
+
 # Lista de Opções
 opcoes = {
     "1": fc.calcular_aceleracao_centripeta,
@@ -17,9 +28,14 @@ while True:
 2. Calcular Transmissão
 3. Calcular Forca Gravitacional
 4. Calcular Velocidade Media
-5. Conversao de Distancia''')
+5. Conversao de Distancia
+
+0. Sair''')
 
     escolha = input("> ")
     # Decisões
     if escolha in opcoes:
         opcoes[escolha]()
+    if escolha == "0":
+        sair()
+        break
