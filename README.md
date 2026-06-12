@@ -12,6 +12,14 @@ Este repositório contém uma ferramenta em Python desenvolvida para automatizar
 
 ### 4. Cálculo de Velocidade Média
 
+### 5. Conversor de Distâncias
+
+### 6. Cálculo de Força Peso
+
+### 7. Cálculo de Força Centrípeta
+
+### 8. Cálculo da Força Normal de um corpo em Trajetória Circular
+
 ## 🛠️ Filosofia do Projeto
 
 - **Clean Code:** Interface minimalista via terminal, sem dependências externas ou poluição visual, facilitando o uso em qualquer ambiente.
