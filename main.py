@@ -18,7 +18,9 @@ opcoes = {
     "3": fc.calcular_forca_gravitacional,
     "4": fc.calcular_velocidade_media,
     "5": fc.conversao_de_distancia,
-    "6": fc.calc_forc_peso
+    "6": fc.calc_forca_peso,
+    "7": fc.calc_forca_centripeta,
+    "8": fc.calc_forca_normal_circular
 }
 
 # Loop Principal
@@ -31,6 +33,8 @@ while True:
 4. Calcular Velocidade Media
 5. Conversao de Distancia
 6. Calcular Forca Peso
+7. Calcular Forca Centripeta
+8. Calcular Forca Normal Circular
 
 0. Sair''')
 

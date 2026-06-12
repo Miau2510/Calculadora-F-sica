@@ -100,7 +100,7 @@ def conversao_de_distancia():
             input("")
 
 # Calcular forca peso
-def calc_forc_peso():
+def calc_forca_peso():
     os.system('cls' if os.name == 'nt' else 'clear')
 
     print("--- Calcular Forca Peso ---")
@@ -117,4 +117,36 @@ def calc_forc_peso():
     massa = float(input("> "))
     peso = (massa * gravidade)
     print(f"A forca peso de um corpo de {massa}Kg em uma gravidade de {gravidade}m/s² é de {peso}N")
+    input("")
+
+def calc_forca_centripeta():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    print("--- Calcular Forca Centrípeta ---")
+    print("Digite a massa do corpo (Kg)")
+    massa = float(input("> "))
+    print("Digite a velocidade linear (m/s)")
+    velocidade = float(input("> "))
+    print("O raio será inserido em metros 'm' ou 'km'?\n1. m\n2. Km")
+    escolha_raio = input("> ")
+    match escolha_raio:
+        case "1":
+            raio = float(input("Digite a distancia em metros: "))
+        case "2":
+            quilometros = float(input("Digite a distancia em quilometros: "))
+            raio = quilometros * 1000
+    forca_centripeta = (massa * (velocidade ** 2) / raio)
+    print(f"A forca centripeta de um corpo de {massa}Kg, com velocidade de {velocidade}m/s e raio de {raio}m é de {forca_centripeta}N")
+    input("")
+
+def calc_forca_normal_circular():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    print("--- Calcular Forca Normal ---")
+    print("Digite a massa do corpo (Kg)")
+    massa = float(input("> "))
+    print("Digite a gravidade (m/s²)")
+    gravidade = float(input("> "))
+    forca_normal = (massa * gravidade)
+    print(f"A forca normal de um corpo de {massa}Kg em uma gravidade de {gravidade}m/s² é de {forca_normal}N")
     input("")
