@@ -31,6 +31,10 @@ Este repositório contém uma ferramenta em Python desenvolvida para automatizar
 Certifica-te de que tens o Python 3 instalado no teu sistema (Linux, Windows ou MacOS).
 
 1. Clone o repositório ou descarregue o ficheiro `calculos_fisica.py`.
-2. No terminal, execute:
+2. No terminal do Linux ou MacOS, execute:
    ```bash
    python3 main.py
+
+   No terminal do Windows, execute:
+   ```bash
+   python main.py
