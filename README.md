@@ -34,7 +34,8 @@ Certifica-te de que tens o Python 3 instalado no teu sistema (Linux, Windows ou 
 2. No terminal do Linux ou MacOS, execute:
    ```bash
    python3 main.py
-
+   ```
    No terminal do Windows, execute:
    ```bash
    python main.py
+   ```
